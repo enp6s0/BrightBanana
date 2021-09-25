@@ -2,7 +2,7 @@
 Serial RGB LED controller based on an Arduino Uno and NeoPixel (WS2812) LED strips
 
 ### Building and using BrightBanana
-* Install Adafruit's NeoPixel [library](https://github.com/adafruit/Adafruit_NeoPixel)
+* Install Adafruit's NeoPixel [library](https://github.com/adafruit/Adafruit_NeoPixel).
 * Load this code onto an Arduino. This code is written specifically for the Uno, but should work on other models as well :)
 * Two channels (channel 1, channel 2) are supported on pins 9 and 10, respectively.
 * Send command strings through serial at `500000 baud` to specify what LED should light up, and what color should it be:
@@ -21,7 +21,7 @@ $1,FFFFFF000000FF0000
 ```
 
 ### Known issues
-* Repeatedly sending command strings that is too long will eventually result in the Arduino locking up (probably due to bad buffer disclipine)
+* Repeatedly sending command strings that is too long will eventually result in the Arduino locking up (probably due to bad buffer discipline)
 
 ### License
 MIT; see license.md for more info
