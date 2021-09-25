@@ -1,11 +1,11 @@
 # BrightBanana
-RGB LED controller based on an Arduino Uno and NeoPixel (WS2812) LED strips
+Serial RGB LED controller based on an Arduino Uno and NeoPixel (WS2812) LED strips
 
-### Using BrightBanana
+### Building and using BrightBanana
 * Install Adafruit's NeoPixel [library](https://github.com/adafruit/Adafruit_NeoPixel)
-* Load this code onto an Arduino. This code is written specifically for the Uno, but should work on other models as well.
-* Two channels (channel 1, channel 2) are supported on pins 9 and 10, respectively
-* Send command strings through serial at `500000 baud` to specify what LED should light up, and what color should it be
+* Load this code onto an Arduino. This code is written specifically for the Uno, but should work on other models as well :)
+* Two channels (channel 1, channel 2) are supported on pins 9 and 10, respectively.
+* Send command strings through serial at `500000 baud` to specify what LED should light up, and what color should it be:
     * Command string begins with the flag `$`, followed by channel number `(0, 1, 2)` with channel `0` having a special meaning of "all channels", and a comma (`,`).
     * Colors will then follow in hex string format, one LED at a time. Capitalization does not matter.
 
