@@ -13,6 +13,9 @@
 
 #include <Adafruit_NeoPixel.h>
 
+// Baud rate
+#define SERIAL_BAUD 1000000
+
 // Channel pin definitions
 #define CHANNEL1_PIN 9
 #define CHANNEL2_PIN 10
@@ -24,7 +27,7 @@
 #define HEARTBEAT_INTERVAL 1000
 
 // Maximum # of LEDs per channel (mostly depends on device memory)
-#define MAX_PIXELS_PER_CHANNEL 160
+#define MAX_PIXELS_PER_CHANNEL 130
 
 /* ====================================================================================== */
 
@@ -75,7 +78,7 @@ void setup() {
     pinMode(STATUS_LED_PIN, OUTPUT);
 
     // Start serial
-    Serial.begin(500000);
+    Serial.begin(SERIAL_BAUD);
     Serial.println("INFO,Initializing");
 
     // Start NeoPixel
@@ -164,6 +167,8 @@ void loop() {
 
             // Send acknowledgement
             Serial.print("OK,");
+            Serial.print(channelCount);
+            Serial.print(",");
             Serial.print(channel);
             Serial.print(",");
             Serial.print(ledNumber);
