@@ -3,6 +3,9 @@ A simple Python script that is designed to be run as a daemon (perhaps using `su
 
 Currently, this only supports a single mode of operation: `rainbow` (endless loop of colors). TODO: add more modes.
 
+### Prerequisites
+Python `>= 3.6`, Redis server, and the Python Redis library.
+
 ### HOWTO?
 After installing all the prerequisites (`pip3 install -r requirements.txt`) and setting up the server software to run as a service (the environment variables `SERIAL_PORT` and `NUM_LEDS` are your friend here), the LEDs can be controlled through setting, as of v1.0, four Redis keys:
 
